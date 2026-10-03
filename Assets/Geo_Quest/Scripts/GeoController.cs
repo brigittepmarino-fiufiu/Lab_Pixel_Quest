@@ -4,10 +4,8 @@ using UnityEngine;
 
 
 
-
 public class Geo_Controller : MonoBehaviour
 {
-    // Start is called before the first frame update
     private string Var2 = "Hello ";
     Rigidbody2D rb;
     int Var3 = 3;
@@ -20,17 +18,16 @@ public class Geo_Controller : MonoBehaviour
         Debug.Log(Var2 + "TEXT");
     }
 
-    // Update is called once per frame
     void Update()
     {
+        // Example: If you want continuous velocity to the left, keep this. 
+        // Note: If you want full WASD control, you might want to remove or adjust this line.
         rb.velocity = new Vector2(-1, rb.velocity.y);
-        Debug.Log(Var3);
-        Var3++;
 
         // Continuous movement along the X axis
         transform.position += new Vector3(0.005f, 0, 0);
 
-        // WASD Movement Controls
+        // WASD Movement Controls (Using GetKeyDown for single-step movement)
         if (Input.GetKeyDown(KeyCode.W))
         {
             transform.position += new Vector3(0, 1, 0);
