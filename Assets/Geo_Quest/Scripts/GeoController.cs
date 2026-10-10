@@ -1,25 +1,49 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 
 
 public class Geo_Controller : MonoBehaviour
 {
-    private string Var2 = "Hello ";
-    Rigidbody2D rb;
-    int Var3 = 3;
+    private Rigidbody2D rb;
+    public int speed = 5;
 
+    //start
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        Debug.Log(Var2 + "World");
-        Var2 = "Goodbye";
-        Debug.Log(Var2 + "TEXT");
+       
     }
 
     void Update()
     {
+        float xInput = Input.GetAxis("Horizontal");
+        rb.velocity = new Vector2(xInput * speed, rb.velocity.y);
+    }
+
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    { switch (collision.tag) { 
+            case "Death":
+            {
+                    string thisLevel = SceneManager.GetActiveScene().name;
+                    Debug.Log("Player Has Died");
+                break;
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+/*
         // Example: If you want continuous velocity to the left, keep this. 
         // Note: If you want full WASD control, you might want to remove or adjust this line.
         rb.velocity = new Vector2(-1, rb.velocity.y);
@@ -47,5 +71,5 @@ public class Geo_Controller : MonoBehaviour
         {
             transform.position += new Vector3(1, 0, 0);
         }
-    }
+    }*/
 }
