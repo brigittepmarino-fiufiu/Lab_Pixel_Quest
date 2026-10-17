@@ -11,6 +11,8 @@ TagManager:
   - Enemy
   - TalkZone
   - Bullet
+  - Bounce
+  - Goal
   layers:
   - Default
   - TransparentFX
