@@ -382,7 +382,7 @@ Transform:
   m_GameObject: {fileID: 394926042}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.81, y: 1.95, z: 0}
+  m_LocalPosition: {x: 6.15, y: 1.99, z: 0}
   m_LocalScale: {x: 1.589374, y: 1.4322264, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1385,7 +1385,7 @@ Transform:
   m_GameObject: {fileID: 1630020348}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8, y: -3, z: 0}
+  m_LocalPosition: {x: -4.78, y: 3.92, z: 0}
   m_LocalScale: {x: 1.4520634, y: 1.1564718, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1404,6 +1404,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
+  jumpPower: 9
+  bouncePower: 16
+  followCamera: 1
 --- !u!50 &1630020352
 Rigidbody2D:
   serializedVersion: 4
@@ -1766,7 +1769,7 @@ Transform:
   m_GameObject: {fileID: 2100000005}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5, y: -3.63, z: 0}
+  m_LocalPosition: {x: 3.09, y: -3.55, z: 0}
   m_LocalScale: {x: 1.6, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
